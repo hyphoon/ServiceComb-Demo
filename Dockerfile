@@ -6,6 +6,4 @@ COPY target/*.jar app.jar
 
 RUN sh -c 'touch app.jar'
 
-EXPOSE 8087:8087
-
 ENTRYPOINT [ "sh", "-c", "java -Djava.security.egd=file:/dev/./urandom -jar -Xmx256m app.jar" ]
